@@ -14,8 +14,8 @@ class Teacher extends Model
 	 * @param  string $username 用户名
 	 * @param  string $password 密码
 	 * @return  boolean 成功返回true, 失败返回false
-	 */ 
-	
+	 */
+
 	static public function login($username, $password)
 	{
 		// 验证用户是否存在
@@ -30,15 +30,15 @@ class Teacher extends Model
 				return true;
 			}
 		}
-		return false; 
+		return false;
 	}
 
 	/**
 	 * 验证密码是否正确
-	 * @param  string $password 密码  
+	 * @param  string $password 密码
 	 * @return  boolean
 	 */
-	
+
 	public function checkPassword($password)
 	{
 		if ($this->getData('password') === $this::encryptPassword($password))
@@ -47,7 +47,7 @@ class Teacher extends Model
 		} else {
 			return false;
 		}
-		
+
 	}
 
 	/**
@@ -55,7 +55,7 @@ class Teacher extends Model
 	 * @param  string $password 加密前密码
 	 * @return  string 加密后密码
 	 */
-	
+
 	static public function encryptPassword($password)
 	{
 		if (!is_string($password)) {
@@ -82,13 +82,13 @@ class Teacher extends Model
 	 * 判断用户是否已登录
 	 * @return  boolean 已登录true
 	 */
-	
+
 	static public function isLogin()
 	{
 		$teacherId = session('teacherId');
 
-		// isset() 检测变量是否设置 
-		if (isset($teacherId)){  
+		// isset() 检测变量是否设置
+		if (isset($teacherId)){
 			return true;
 		} else {
 			return false;
