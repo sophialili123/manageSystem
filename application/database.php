@@ -17,7 +17,7 @@ return [
     // 数据库名
     'database'        => 'edu',
     // 用户名
-    'username'        => 'root',
+    'username'        => 'test',
     // 密码
     'password'        => '111111',
     // 端口

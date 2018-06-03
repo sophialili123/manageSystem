@@ -43,7 +43,7 @@
             <hr />
             <div class="row">
                 <div class="col-md-8">
-                    <form class="form-inline" action="{:url()}">
+                    <form class="form-inline" action=""><!--{:url()}-->
                         <div class="form-group">
                             <label class="sr-only" for="name">名称</label>
                             <input name="name" type="text" class="form-control" placeholder="名称..." value="{:input('get.name')}">
@@ -57,12 +57,10 @@
                 </div>
             </div>
             <hr /> 
-            {/block} 
-            {block name="content"} 
-
-            {/block} 
-            {block name="page"} 
-            
+            {/block}
+            {block name="content"}
+            {/block}
+            {block name="page"}
             {/block}
         </div>
     </div>
